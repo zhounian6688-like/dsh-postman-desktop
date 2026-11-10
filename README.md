@@ -2,6 +2,9 @@
 
 Postman 式的 HTTP 调试面板，直接长在 DeepSeek Harness 的 Web GUI 里。侧边栏「发包台」进入，并且给 agent 一个共用同一条发送链路的 `http_request_desktop` 工具。
 
+[![npm](https://img.shields.io/npm/v/dsh-postman-desktop?label=npm)](https://www.npmjs.com/package/dsh-postman-desktop)
+[![release](https://img.shields.io/github/v/release/zhounian6688-like/dsh-postman-desktop)](https://github.com/zhounian6688-like/dsh-postman-desktop/releases)
+
 - 宿主：DeepSeek Harness（`dsh`）Web profile，`engines.dsh >= 0.2.1-rc.1`
 - 依赖：零运行时依赖，只用 `node:` 内置模块；前端是纯 `React.createElement`，无构建步骤
 - 数据：全部落在 `$DSH_HOME/postman-desktop/store.json`（`0600`），一个文件即可备份或手改
@@ -9,7 +12,11 @@ Postman 式的 HTTP 调试面板，直接长在 DeepSeek Harness 的 Web GUI 里
 ## 安装
 
 ```sh
+# 已发 npm 时
 dsh plugin --profile web add dsh-postman-desktop
+
+# 或直接用 GitHub Release 的打包文件
+dsh plugin --profile web add https://github.com/zhounian6688-like/dsh-postman-desktop/releases/download/v1.0.0/dsh-postman-desktop-1.0.0.tgz
 ```
 
 装完刷新页面（或重启桌面版）即可看到侧边栏图标。本包同时提供 host 半与 client 半，`dsh.bundle` 与 `dsh.client` 都由 `cordis.patch.yml` 自动挂载，不需要额外的 profile 配置。
