@@ -21,4 +21,5 @@ Thumbs.db
 # scratch
 _rel2/
 _*.ps1
+_*.mjs
 _screens.json
