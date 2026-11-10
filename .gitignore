@@ -17,3 +17,8 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# scratch
+_rel2/
+_*.ps1
+_screens.json

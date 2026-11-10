@@ -9,6 +9,16 @@ Postman 式的 HTTP 调试面板，直接长在 DeepSeek Harness 的 Web GUI 里
 - 依赖：零运行时依赖，只用 `node:` 内置模块；前端是纯 `React.createElement`，无构建步骤
 - 数据：全部落在 `$DSH_HOME/postman-desktop/store.json`（`0600`），一个文件即可备份或手改
 
+## 界面
+
+![发包工作台：发出 GET 请求并查看 HTML 响应](https://raw.githubusercontent.com/zhounian6688-like/dsh-postman-desktop/main/assets/screenshots/01-request.png)
+
+| 历史：每条带状态码，点一下还原整个请求 | CDN 源站探测：判定「已删除」还是「只是边缘缓存」 |
+|---|---|
+| ![历史与 HTML 预览](https://raw.githubusercontent.com/zhounian6688-like/dsh-postman-desktop/main/assets/screenshots/02-history-preview.png) | ![CDN 源站探测](https://raw.githubusercontent.com/zhounian6688-like/dsh-postman-desktop/main/assets/screenshots/03-cdn-probe.png) |
+
+真实截图，不是效果图：第一张是发一个 GET 拿到 `200 OK` 与 HTML 正文，第二张是历史列表加预览页签，第三张对同一个站点连读两次并给出「已删除」的结论。
+
 ## 安装
 
 ```sh
@@ -116,6 +126,16 @@ MIT
 ## English
 
 A Postman-style HTTP workbench that lives inside the DeepSeek Harness Web GUI. One sidebar entry, one agent tool, one send path.
+
+## Screenshots
+
+![The workbench: a GET and its HTML response](https://raw.githubusercontent.com/zhounian6688-like/dsh-postman-desktop/main/assets/screenshots/01-request.png)
+
+| History — every send with its status code, one click to restore | CDN origin probe — "gone" vs "the edge is lying" |
+|---|---|
+| ![History and HTML preview](https://raw.githubusercontent.com/zhounian6688-like/dsh-postman-desktop/main/assets/screenshots/02-history-preview.png) | ![CDN origin probe](https://raw.githubusercontent.com/zhounian6688-like/dsh-postman-desktop/main/assets/screenshots/03-cdn-probe.png) |
+
+Real screenshots, not mockups: the first sends a GET and shows `200 OK` with the HTML body, the second is the history list with the preview tab, the third reads one site twice and concludes the object is gone.
 
 ```sh
 dsh plugin --profile web add dsh-postman-desktop
