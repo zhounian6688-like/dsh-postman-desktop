@@ -1,6 +1,6 @@
 {
   "name": "dsh-postman-desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Postman-style HTTP request workbench for DeepSeek Harness: collections, environments, request builder, response inspector, cURL import/export, CDN origin probe, plus an http_request_desktop agent tool on the same send path.",
   "keywords": [

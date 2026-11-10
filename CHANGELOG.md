@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-11-10
+
+- README 补三张真实界面截图（中文 / English 各一节），并新增 `screenshots.json` 供插件市场详情页渲染。
+- `package.json` 的 `author` / `repository` / `homepage` / `bugs` 填成真实值（此前是占位符）。
+- 截图不进 npm 包，安装体积不变。
+
 ## 1.0.0 — 2026-11-10
 
 首次发布。

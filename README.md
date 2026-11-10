@@ -26,7 +26,7 @@ Postman 式的 HTTP 调试面板，直接长在 DeepSeek Harness 的 Web GUI 里
 dsh plugin --profile web add dsh-postman-desktop
 
 # 或直接用 GitHub Release 的打包文件
-dsh plugin --profile web add https://github.com/zhounian6688-like/dsh-postman-desktop/releases/download/v1.0.0/dsh-postman-desktop-1.0.0.tgz
+dsh plugin --profile web add https://github.com/zhounian6688-like/dsh-postman-desktop/releases/latest/download/dsh-postman-desktop-1.0.1.tgz
 ```
 
 装完刷新页面（或重启桌面版）即可看到侧边栏图标。本包同时提供 host 半与 client 半，`dsh.bundle` 与 `dsh.client` 都由 `cordis.patch.yml` 自动挂载，不需要额外的 profile 配置。
