@@ -1,0 +1,68 @@
+{
+  "name": "dsh-postman-desktop",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Postman-style HTTP request workbench for DeepSeek Harness: collections, environments, request builder, response inspector, cURL import/export, CDN origin probe, plus an http_request_desktop agent tool on the same send path.",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "postman",
+    "http",
+    "http-client",
+    "api-testing",
+    "rest",
+    "curl",
+    "workbench"
+  ],
+  "license": "MIT",
+  "author": "zhounian6688-like <265835543+zhounian6688-like@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhounian6688-like/dsh-postman-desktop.git"
+  },
+  "homepage": "https://github.com/zhounian6688-like/dsh-postman-desktop#readme",
+  "bugs": {
+    "url": "https://github.com/zhounian6688-like/dsh-postman-desktop/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.1"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/*.png",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "test/smoke.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}

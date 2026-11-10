@@ -1,0 +1,9 @@
+# dsh-postman-desktop bundle patch —— 把一个 Postman 式发包工作台挂进桌面版 Web GUI。
+#
+# 行是裸包名：本包同时提供 host 半（exports "."：/api/dsh-postman-desktop 路由 +
+# http_request_desktop 工具）与 client 半（dsh.client 声明的 ./client）。
+# 路由前缀与手机版 dsh-postman 的 /api/dsh-postman 不冲突，两者可以并存，
+# 但侧边栏会出现两个入口。
+- insert:
+    - id: dsh-postman-desktop
+      name: 'dsh-postman-desktop'

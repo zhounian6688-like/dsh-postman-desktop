@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build / pack output
+*.tgz
+*.tar.gz
+dist/
+build/
+
+# local data & logs
+*.log
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+*.swp
